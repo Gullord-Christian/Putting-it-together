@@ -1,24 +1,28 @@
+//import react
 import React, {Component} from 'react';
 
-class PersonCard extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            age: this.props.age
-        }
-    }
-    increaseAge = () => {
-        this.setState ({ age: this.state.age +1});
-    }
-    render(){
+// define class and link component
+const PersonCard = props => {
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //         age: this.props.age
+    //     }
+    // }
+    // increaseAge = () => {
+    //     this.setState ({ age: this.state.age +1});
+    // 
         return (
         <div>
-            <h3>{this.props.lastName}, {this.props.firstName}</h3>
-            <p>Age:{this.state.age}</p>
-            <p>Hair Color: {this.props.hairColor}</p>
-            <button onClick={this.increaseAge}> Birthday Button for {this.props.firstName}{this.props.lastName}</button>
+            <h3>{props.lastName}, {props.firstName}</h3>
+            <p>Age:{props.age}</p>
+            <p>Hair Color: {props.hairColor}</p>
+            {/* <button onClick={this.increaseAge}> Birthday Button for {this.props.firstName}{this.props.lastName}</button> */}
         </div>
         );
-    }
 }
+
+
+
+// export class 
 export default PersonCard;
